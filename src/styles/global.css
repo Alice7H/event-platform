@@ -7,3 +7,32 @@ body{
   @apply bg-gray-900 text-gray-100; 
   -webkit-font-smoothing: antialiased;
 }
+
+label {
+  visibility: hidden;
+  height: 0px;
+}
+
+.bg-react {
+  background: url('/src/assets/reactjs-icon.png') no-repeat;
+  background-size: contain;
+  background-position: center top;
+}
+
+.bubble {
+  position: relative;
+}
+
+.bubble:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: transparent #00875F;
+  border-width: 20px 20px 20px 0;
+  top: 50%;
+  left: -10px;
+  margin-top: -20px;
+}

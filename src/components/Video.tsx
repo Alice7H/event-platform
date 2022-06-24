@@ -2,6 +2,7 @@ import { CaretRight, DiscordLogo, FileArrowDown, Image, Lightning } from 'phosph
 import {DefaultUi, Player, Youtube } from '@vime/react'
 import { gql, useQuery } from '@apollo/client';
 import Button from './Button'
+import Loading from './Loading';
 import '@vime/core/themes/default.css';
 
 const GET_LESSON_BY_SLUG_QUERY = gql `
@@ -43,14 +44,14 @@ export default function Video(props: IVideoProps) {
 
   if(!data){
     return (
-      <div className="flex-1">
-        <p>Carregando...</p>
+      <div className="flex-1 items-center justify-center">
+        <Loading />
       </div>
     )
   }
 
   return (
-    <div className="flex-1">
+    <div className="md:flex-1">
       <div className="bg-black flex justify-center">
         <div className="w-full h-full max-w-[1100px] max-h-[60vh] aspect-video">
           <Player>
@@ -60,7 +61,7 @@ export default function Video(props: IVideoProps) {
         </div>
       </div>
       <div className="p-8 max-w-[1100] mx-auto">
-        <div className="flex items-start gap-16">
+        <div className="flex items-start gap-16 flex-col md:flex-row">
           <div className="flex-1">
             <h1 className="text-2xl font-bold">
               {data.lesson.title}
@@ -82,7 +83,7 @@ export default function Video(props: IVideoProps) {
             </div>
 
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 w-full md:w-auto">
             <Button variant="primary" link="#">
               <DiscordLogo size={24}/>
               Comunidade do Discord
@@ -94,22 +95,22 @@ export default function Video(props: IVideoProps) {
           </div>
         </div>
 
-        <div className="gap-8 mt-20 grid grid-cols-2">
+        <div className="gap-8 mt-20 grid grid-cols-1 xl:grid-cols-2">
           <a
             target="_blank" 
             href="https://efficient-sloth-d85.notion.site/Material-complementar-86d4ef35af16471ebc3ae3eba1a378e5" 
-            className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors"
+            className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-4 md:gap-6 hover:bg-gray-600 transition-colors"
           >
-            <div className="bg-green-700 h-full p-6 flex items-center">
+            <div className="bg-green-700 h-full p-4 md:p-6 flex items-center">
               <FileArrowDown size={40}/>
             </div>
             <div className="py-6 leading-relaxed">
-              <strong className="text-2xl">Material complementar</strong>
-              <p className="text-sm text-gray-200 mt-2">
+              <strong className="text-base md:text-2xl">Material complementar</strong>
+              <p className="text-xs md:text-sm text-gray-200 mt-2">
                 Acesse o material complementar para acelerar o seu desenvolvimento
               </p>
             </div>
-            <div className="h-full p-6 flex items-center">
+            <div className="h-full p-4 md:p-6 flex items-center">
               <CaretRight size={24}/>
             </div>
           </a>
@@ -117,18 +118,18 @@ export default function Video(props: IVideoProps) {
           <a 
             target="_blank" 
             href="https://drive.google.com/drive/folders/1mxWnvlqmH7MbVRv2Na9xFNgCQCygM1iR" 
-            className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors"
+            className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-4 md:gap-6 hover:bg-gray-600 transition-colors"
           >
-            <div className="bg-green-700 h-full p-6 flex items-center">
+            <div className="bg-green-700 h-full p-4 md:p-6 flex items-center">
               <Image size={40}/>
             </div>
             <div className="py-6 leading-relaxed">
-              <strong className="text-2xl">Wallpapers exclusivos</strong>
-              <p className="text-sm text-gray-200 mt-2">
+              <strong className="text-base md:text-2xl">Wallpapers exclusivos</strong>
+              <p className="text-xs md:text-sm text-gray-200 mt-2">
                 Baixe wallpapers exclusivos do Ignite Lab e personalize a sua máquina
               </p>
             </div>
-            <div className="h-full p-6 flex items-center">
+            <div className="h-full p-4 md:p-6 flex items-center">
               <CaretRight size={24}/>
             </div>
           </a>

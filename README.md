@@ -1,4 +1,10 @@
+<h1 align="center">
+  <img alt="Banner" title="Banner" src="/src/assets/banner.png" />
+</h1>
+
 ## Event Platform
+
+Este projeto tem o objetivo de exibir a plataforma com os cursos do Evento Ignite Lab da Rocketseat.
 
 ## Tecnologias utilizadas
 
@@ -8,14 +14,10 @@
 - [Apollo GraphQL](https://www.apollographql.com/)
 - [Phosphor-react](https://phosphoricons.com/)
 - [Vime](https://vimejs.com/)
+- [classnames](https://www.npmjs.com/package/classnames)
 
 ## GraphQL
 
 query = buscar dados
+
 mutation = criar, alterar e deletar dados
-
-## Tarefas
-
-- Deixar responsivo
-- Adicionar imagem alternativa quando não tiver um slug na parte do vídeo
-- Adicionar um loading.
