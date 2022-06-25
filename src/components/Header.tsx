@@ -14,6 +14,7 @@ export default function Header({changeMenu, isMenuClose}: IHeaderProps) {
       gap-4 px-8 md:px-0
       justify-between md:justify-center 
       bg-gray-700 border-b border-gray-600
+      sticky top-0 z-[60]
     ">
       <Logo/> 
       <button 

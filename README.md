@@ -15,6 +15,7 @@ Este projeto tem o objetivo de exibir a plataforma com os cursos do Evento Ignit
 - [Phosphor-react](https://phosphoricons.com/)
 - [Vime](https://vimejs.com/)
 - [classnames](https://www.npmjs.com/package/classnames)
+- [GraphQL Code Generator](https://www.graphql-code-generator.com/)
 
 ## GraphQL
 

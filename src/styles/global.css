@@ -13,12 +13,6 @@ label {
   height: 0px;
 }
 
-.bg-react {
-  background: url('/src/assets/reactjs-icon.png') no-repeat;
-  background-size: contain;
-  background-position: center top;
-}
-
 .bubble {
   position: relative;
 }

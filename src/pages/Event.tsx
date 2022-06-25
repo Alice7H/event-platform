@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useParams } from "react-router-dom";
+import Footer from '../components/Footer';
 import Header from "../components/Header";
 import MessageDefault from "../components/MessageDefault";
 import Sidebar from "../components/Sidebar";
@@ -20,6 +21,7 @@ export default function Event() {
         }                
         <Sidebar isMenuClose={isMenuClose}/>
       </main> 
+      <Footer/>
     </div>
   )
 }

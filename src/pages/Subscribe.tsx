@@ -1,16 +1,9 @@
-import { gql, useMutation } from "@apollo/client";
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import { Logo } from "../components/Logo";
-
-const CREATE_SUBSCRIBER_MUTATION = gql `
-  mutation CreateSubscriber($name: String!, $email: String!){
-    createSubscriber(data: {name: $name, email: $email}) {
-      id
-    }
-  }
-`
+import { useCreateSubscriberMutation } from "../graphql/generated";
+import codeMockup from '/src/assets/banner-background.png';
 
 export default function Subscribe() {
   const navigate = useNavigate();
@@ -18,9 +11,9 @@ export default function Subscribe() {
   const[name, setName] = useState('');
   const[email, setEmail] = useState('');
 
-  const [createSubscriber, { loading }] = useMutation(CREATE_SUBSCRIBER_MUTATION);
+  const [createSubscriber, { loading }] = useCreateSubscriberMutation();
   
-  async function handleSubmit(event: FormEvent){
+  async function handleSubmit(event: FormEvent):Promise<void> {
     event.preventDefault();
     await createSubscriber({
       variables: {
@@ -35,7 +28,7 @@ export default function Subscribe() {
   return (
     <>
       <main className="bg-blur bg-cover bg-no-repeat flex flex-col items-center min-h-screen">
-        <div className="bg-react w-full max-w-[1100px] flex flex-col md:flex-row items-center justify-between mt-20 mx-auto gap-6 md:px-8">
+        <div className="bg-react bg-top bg-contain bg-no-repeat w-full max-w-[1100px] flex flex-col md:flex-row items-center justify-between mt-20 mx-auto gap-6 md:px-8">
           <div className="max-w-[648px] flex flex-col md:items-start items-center text-center md:text-left mt-10 px-8 md:px-0">
             <Logo />
             <h1 className="text-3xl md:text-[2.5rem] mt-8 leading-tight">
@@ -82,7 +75,7 @@ export default function Subscribe() {
           </div>
         </div>
 
-        <img src="/src/assets/banner-background.png" alt="Code Mockup" className="mt-10 px-2 md:px-40" />
+        <img src={codeMockup} alt="Code Mockup" className="mt-10 px-2 md:px-40" />
       </main>
       <Footer/>
     </>
