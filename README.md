@@ -31,6 +31,6 @@ mutation = criar, alterar e deletar dados
 
 - Cards de eventos bloqueados de acordo com a data estipulada para sua disponibilidade.
 
-- Responsividade com o botão 'ESCAPE' para fechar o menu.
+- Responsividade com a tecla 'ESCAPE' para fechar o menu de aulas.
 
 - Mudança no formato do card de aula para balão de fala, mais fiel ao [Figma](https://www.figma.com/community/file/1120711251998877938).
