@@ -5,10 +5,12 @@ import Header from "../components/Header";
 import MessageDefault from "../components/MessageDefault";
 import Sidebar from "../components/Sidebar";
 import Video from "../components/Video";
+import useEscape from '../hooks/useEscape';
 
 export default function Event() {
   const { slug } = useParams<{slug: string}>();
   const [isMenuClose, setIsMenuClose] = useState<boolean>(true);
+  useEscape(() => setIsMenuClose(true));
 
   return (
     <div className="flex flex-col min-h-screen">

@@ -15,10 +15,22 @@ Este projeto tem o objetivo de exibir a plataforma com os cursos do Evento Ignit
 - [Phosphor-react](https://phosphoricons.com/)
 - [Vime](https://vimejs.com/)
 - [classnames](https://www.npmjs.com/package/classnames)
+- [date-fns](https://date-fns.org/)
 - [GraphQL Code Generator](https://www.graphql-code-generator.com/)
+- [React Router DOM](https://www.npmjs.com/package/react-router-dom)
 
 ## GraphQL
 
 query = buscar dados
 
 mutation = criar, alterar e deletar dados
+
+## Novos recursos
+
+- Mensagem para o usuário selecionar uma aula.
+
+- Cards de eventos bloqueados de acordo com a data estipulada para sua disponibilidade.
+
+- Responsividade com o botão 'ESCAPE' para fechar o menu.
+
+- Mudança no formato do card de aula para balão de fala, mais fiel ao [Figma](https://www.figma.com/community/file/1120711251998877938).
